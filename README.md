@@ -12,17 +12,17 @@
    Listar 5 requisitos não funcionais e descrevê-los com suas palavras (ver slides 8, 9 e 10)
    <br>
    
-   Auditabilidade: um sistema deve ter a capacidade de registrar ações e eventos para que possam ser verificados posteriormente, é importante conseguir rastrear ações.
-   Integridade: a informação deve se manter na sua forma original, não pode ser alterada sem autorização. Dados devem ser consistentes e precisos durante todo o seu ciclo de vida.
-   Usabilidade: o sistema deve ser intuitivo, fácil de se usar e de se aprender. O usuário deve ter uma boa experiência ao utilizar o sistema.
-   Segurança: o sistema deve ser seguro e protegido contra acessos não autorizados e ataques. Deve ter mecanismos de autenticação, criptografia, etc.
-   Escalabilidade: o sistema deve ser capaz de lidar com um aumento na quantidade de usuários ou de dados sem perder desempenho.
+   Auditabilidade: um sistema deve ter a capacidade de registrar ações e eventos para que possam ser verificados posteriormente, é importante conseguir rastrear ações.<br>
+   Integridade: a informação deve se manter na sua forma original, não pode ser alterada sem autorização. Dados devem ser consistentes e precisos durante todo o seu ciclo de vida. <br>
+   Usabilidade: o sistema deve ser intuitivo, fácil de se usar e de se aprender. O usuário deve ter uma boa experiência ao utilizar o sistema. <br>
+   Segurança: o sistema deve ser seguro e protegido contra acessos não autorizados e ataques. Deve ter mecanismos de autenticação, criptografia, etc. <br>
+   Escalabilidade: o sistema deve ser capaz de lidar com um aumento na quantidade de usuários ou de dados sem perder desempenho.<br>
 
 
    4 - Trade-offs (negociação entre requisitos não funcionais)<br>
    Citar e descrever 3 cenários de trade-offs (ver slide 12, mas usar outros exemplos)
    <br>
    
-   Segurança versus usabilidade: quanto mais barreiras de segurança (como autenticação de dois fatores, senhas complexas, etc), menor a usabilidade e pior a experiência do usuário.
-   Velocidade de entrega versus Qualidade técnica: dilema entre lançar rápido uma funcionalidade ou investir mais tempo em refatoração, testes, arquitetura. Caso priorize a velocidade corre o risco de entregar um projeto sem qualidade, e com uma experiência do usuário prejudicada. Se priorizar qualidade, o software tende a ser mais estável e sustentável, porém demora mais para chegar ao usuário
-   Flexibilidade versus Simplicidade: dilema entre criar uma arquitetura preparada para muitos cenários futuros ou algo direto para resolver o problema atual. Mais flexibilidade: aumenta a capacidade de evolução, mas também a complexidade. Mais simplicidade: acelera o desenvolvimento e reduz bugs, porém pode limitar mudanças futuras.
+   Segurança versus usabilidade: quanto mais barreiras de segurança (como autenticação de dois fatores, senhas complexas, etc), menor a usabilidade e pior a experiência do usuário. <br>
+   Velocidade de entrega versus Qualidade técnica: dilema entre lançar rápido uma funcionalidade ou investir mais tempo em refatoração, testes, arquitetura. Caso priorize a velocidade corre o risco de entregar um projeto sem qualidade, e com uma experiência do usuário prejudicada. Se priorizar qualidade, o software tende a ser mais estável e sustentável, porém demora mais para chegar ao usuário. <br>
+   Flexibilidade versus Simplicidade: dilema entre criar uma arquitetura preparada para muitos cenários futuros ou algo direto para resolver o problema atual. Mais flexibilidade: aumenta a capacidade de evolução, mas também a complexidade. Mais simplicidade: acelera o desenvolvimento e reduz bugs, porém pode limitar mudanças futuras. <br>
