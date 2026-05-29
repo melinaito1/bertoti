@@ -34,16 +34,4 @@ public class Salgado {
             return false;
         }
     }
-
-
 }
-
-//
-//    public Boolean comparar(Jogo jogo) {
-//        if(this.titulo.equals(jogo.titulo) && this.produtora.equals(jogo.produtora) && this.estilo.equals(jogo.estilo)) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
-//}
