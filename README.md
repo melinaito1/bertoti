@@ -1,12 +1,15 @@
 
 ### 1. Comentar com suas palavras o primeiro trecho do livro Software Engineering at Google, Oreilly. (primeiro post)<br>
    <br>O trecho busca esclarecer que programar não é exatamente o mesmo que fazer engenharia de software. Enquanto a programação costuma estar associada ao ato de escrever código, a engenharia de software envolve uma visão mais ampla, como aplicar conhecimento teórico, pensar em processos, confiabilidade e impacto real dos sistemas que estão sendo construídos. A comparação com engenharias tradicionais reforça essa ideia, e outras áreas já operam com padrões rigorosos porque erros podem gerar consequências graves, algo que historicamente nem sempre ocorreu no desenvolvimento de software.
-   Ao mesmo tempo, os autores sugerem que essa realidade está mudando. À medida que o software passa a fazer parte de praticamente tudo (infraestrutura, serviços e decisões do cotidiano) torna-se necessário adotar práticas mais maduras e disciplinadas. A perspectiva do Google aparece como a de quem vive problemas de escala e manutenção contínua, mostrando que engenharia de software não é só criar algo que funciona hoje, mas garantir que continue funcionando bem ao longo do tempo. No fundo, o trecho mostra que o desenvolvimento de software deve ser visto como uma engenharia responsável, que equilibra teoria, prática e impacto no mundo real.
+   Ao mesmo tempo, os autores sugerem que essa realidade está mudando. À medida que o software passa a fazer parte de praticamente tudo (infraestrutura, serviços e decisões do cotidiano) torna-se necessário adotar práticas mais maduras e disciplinadas. A perspectiva do Google aparece como a de quem vive problemas de escala e manutenção contínua, mostrando que engenharia de software não é só criar algo que funciona hoje, mas garantir que continue funcionando bem ao longo do tempo. No fundo, o trecho mostra que o desenvolvimento de software deve ser visto como uma engenharia responsável, que equilibra teoria, prática e impacto no mundo real.<br>
+   <br>
+Engenharia de software não é só “fazer código funcionar”, mas construir software de forma organizada, confiável e responsável, usando práticas mais rigorosas, como outras áreas da engenharia fazem.
 
 ### 2. Comentar com suas palavras o segundo trecho do livro Software Engineering at Google, Oreilly.(segundo post)<br>
    <br>Esse trecho reforça a ideia de que engenharia de software não é só escrever código, mas cuidar de tudo o que permite que ele continue útil ao longo do tempo. Quando os autores falam em “programming integrated over time”, eles lembram que o verdadeiro desafio não é fazer algo funcionar hoje, e sim garantir que o sistema consiga evoluir, mudar e ainda fazer sentido daqui a anos.
    Os três princípios (tempo e mudança, escala e crescimento e trade-offs e custos) trazem uma visão bem prática do dia a dia, o código vai precisar se adaptar, as equipes vão crescer e cada decisão técnica tem um preço. Bons engenheiros pensam além da solução imediata e escrevem software considerando as pessoas e os problemas que virão depois, não apenas o momento atual.
-<br>
+<br><br>
+Enquanto programar é fazer o código funcionar, engenharia de software é fazer o código funcionar hoje e continuar funcionando, evoluindo e sendo sustentável no futuro.
 
 ### 3. Requisitos não funcionais<br>
    Listar 5 requisitos não funcionais e descrevê-los com suas palavras (ver slides 8, 9 e 10)
