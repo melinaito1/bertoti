@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugHunters Burger | Cardápio</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/index.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">🍔</div>
+            <div>
+                <h2>BUG<span>HUNTERS</span></h2>
+                <small>BURGER HOUSE</small>
+            </div>
+        </div>
+
+        <div class="sidebar-label">GERENCIAMENTO</div>
+
+        <div class="nav-active">
+            <span>▦</span> Cardápio
+            <span class="nav-tag">CRUD</span>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="side-card">
+                <span class="star">✦</span>
+                <h3>Seu cardápio, em dia.</h3>
+                <p>Cadastre, edite e organize seus hambúrgueres.</p>
+            </div>
+            <small>SPRING BOOT × ORACLE DB</small>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>PAINEL <span>/</span> <strong>CARDÁPIO</strong></div>
+            <div class="connection">
+                <span class="dot" id="status-dot"></span>
+                <span id="connection-text">Verificando API...</span>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="eyebrow">✦ BUG HUNTERS · ÁREA ADMINISTRATIVA</div>
+
+                    <h1>O melhor do <em>burger</em><br>
+                        começa por aqui<span class="yellow">.</span>
+                    </h1>
+
+                    <p>
+                        Controle seu cardápio em tempo real.
+                        Adicione novas criações, atualize receitas
+                        e mantenha tudo organizado.
+                    </p>
+
+                    <button class="btn btn-yellow" id="hero-add">
+                        + Novo hambúrguer ↗
+                    </button>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <div class="art-circle"></div>
+                    <div class="burger-emoji">🍔</div>
+                    <div class="art-tag">100% BURGERS</div>
+                </div>
+            </section>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">▤</div>
+                    <div>
+                        <p>TOTAL DE HAMBÚRGUERES</p>
+                        <h2 id="total-count">—</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✦</div>
+                    <div>
+                        <p>RESULTADOS DA BUSCA</p>
+                        <h2 id="visible-count">—</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">↗</div>
+                    <div>
+                        <p>FONTE DE DADOS</p>
+                        <h2 class="db-title">Oracle DB</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="catalog">
+
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">GERENCIE SEUS PRODUTOS</div>
+                        <h2>Nosso cardápio <span id="list-count">(0)</span></h2>
+                    </div>
+
+                    <button class="btn btn-yellow" id="add-button">
+                        + Adicionar hambúrguer
+                    </button>
+                </div>
+
+                <div class="toolbar">
+                    <input
+                            type="search"
+                            id="search"
+                            placeholder="⌕  Buscar hambúrguer por nome ou ID..."
+                    >
+
+                    <button class="btn btn-outline" id="refresh-button">
+                        ↻ Atualizar
+                    </button>
+                </div>
+
+                <div id="error-banner" class="error-banner hidden"></div>
+
+                <div id="burger-list" class="burger-list">
+                    <div class="empty">Carregando hambúrgueres...</div>
+                </div>
+
+                <div class="catalog-footer">
+                    <span>Dados sincronizados com seu banco Oracle</span>
+                    <span>BUGHUNTERS BURGER © 2026</span>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</div>
+
+<!-- Modal de cadastrar e editar -->
+<div class="modal-overlay hidden" id="form-modal">
+    <div class="modal" role="dialog" aria-modal="true"
+         aria-labelledby="modal-title">
+
+        <button class="close-button" id="close-form"
+                aria-label="Fechar">×</button>
+
+        <div class="modal-icon">🍔</div>
+        <div class="eyebrow">CARDÁPIO / GERENCIAMENTO</div>
+        <h2 id="modal-title">Novo hambúrguer</h2>
+        <p id="modal-description">
+            Adicione uma nova criação ao seu cardápio.
+        </p>
+
+        <form id="burger-form">
+            <label for="burger-name">NOME DO HAMBÚRGUER *</label>
+
+            <input
+                    id="burger-name"
+                    type="text"
+                    maxlength="100"
+                    required
+                    placeholder="Ex.: Double Cheddar Bacon"
+            >
+
+            <small id="id-hint">
+                O identificador será gerado automaticamente.
+            </small>
+
+            <div class="modal-actions">
+                <button type="button" class="btn btn-outline"
+                        id="cancel-form">Cancelar</button>
+
+                <button type="submit" class="btn btn-yellow"
+                        id="save-button">Salvar hambúrguer ↗</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal de confirmação de exclusão -->
+<div class="modal-overlay hidden" id="delete-modal">
+    <div class="modal" role="alertdialog" aria-modal="true"
+         aria-labelledby="delete-title">
+
+        <button class="close-button" id="close-delete"
+                aria-label="Fechar">×</button>
+
+        <div class="modal-icon danger">!</div>
+        <h2 id="delete-title">Excluir hambúrguer?</h2>
+        <p id="delete-description">
+            Esta ação removerá o registro do Oracle.
+        </p>
+
+        <div class="modal-actions">
+            <button class="btn btn-outline" id="cancel-delete">
+                Cancelar
+            </button>
+
+            <button class="btn btn-danger" id="confirm-delete">
+                Sim, excluir
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="toast hidden" id="toast" role="status"></div>
+
+</body>
+</html>
